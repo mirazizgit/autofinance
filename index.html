@@ -659,7 +659,7 @@
         <section class="view" id="contractsView">
           <div class="page-head">
             <div><div class="eyebrow" data-i18n="ct_eyebrow">Portfolio register</div><h1 data-i18n="ct_title">Contracts</h1><p data-i18n="ct_sub">Add contracts manually or import an XLSX workbook; a Payments sheet can record payments by contract ID.</p></div>
-            <div class="actions"><button class="btn" id="importExcelBtn"><span data-icon="upload"></span><span data-i18n="btn_import_excel">Import Excel</span></button><button class="btn btn-primary" data-open-contract><span data-icon="plus"></span><span data-i18n="btn_new_contract">New contract</span></button></div>
+            <div class="actions"><button class="btn" id="exportContractsExcelBtn"><span data-icon="download"></span><span data-i18n="btn_export_excel">Export Excel</span></button><button class="btn" id="importExcelBtn"><span data-icon="upload"></span><span data-i18n="btn_import_excel">Import Excel</span></button><button class="btn btn-primary" data-open-contract><span data-icon="plus"></span><span data-i18n="btn_new_contract">New contract</span></button></div>
           </div>
           <div class="filterbar">
             <div class="search-box"><span data-icon="search"></span><input id="contractSearch" type="search" data-i18n-placeholder="ct_search_placeholder" placeholder="Search model, borrower, plate or ID"></div>
@@ -675,7 +675,7 @@
         <section class="view" id="paymentsView">
           <div class="page-head">
             <div><div class="eyebrow" data-i18n="pay_eyebrow">Cash control</div><h1 data-i18n="pay_title">Payments</h1><p data-i18n="pay_sub">Track the collection schedule, next due amounts, and recorded payment performance.</p></div>
-            <div class="actions"><button class="btn btn-accent" id="paymentsRecordBtn"><span data-icon="plus"></span><span data-i18n="btn_record_payment">Record payment</span></button></div>
+            <div class="actions"><button class="btn" id="exportPaymentsExcelBtn"><span data-icon="download"></span><span data-i18n="btn_export_excel">Export Excel</span></button><button class="btn btn-accent" id="paymentsRecordBtn"><span data-icon="plus"></span><span data-i18n="btn_record_payment">Record payment</span></button></div>
           </div>
           <div class="kpi-grid" id="paymentKpis"></div>
           <div class="dashboard-grid">
@@ -813,7 +813,7 @@
         tagline: 'PORTFOLIO OS', nav_workspace: 'Workspace', nav_overview: 'Overview', nav_contracts: 'Contracts', nav_payments: 'Payments', nav_risk: 'Risk monitor', nav_risk_short: 'Risk', nav_analytics: 'Analytics',
         search_portfolio: 'Search portfolio', search_placeholder: 'Search contracts, clients, plates…', export_title: 'Export portfolio data', record_payment_title: 'Record a payment', logout_title: 'Log out securely', btn_logout: 'Log out', profile_name: 'Miraziz Mirjalolov', profile_role: 'Finance Owner · Administrator',
         ov_eyebrow: 'Owner dashboard', ov_title: 'Portfolio overview', btn_record_payment: 'Record payment', btn_new_contract: 'New contract', ov_cashflow_title: 'Monthly collections', ov_cashflow_sub: 'Scheduled versus recorded payments · last 12 months including the current month', legend_scheduled: 'Scheduled', legend_collected: 'Collected', legend_current: 'Current month', ov_risk_title: 'Portfolio status', ov_risk_sub: 'Open receivables grouped by payment risk', ov_attention_title: 'Requires attention', btn_view_all: 'View all', th_contract: 'Contract', th_borrower: 'Borrower', th_outstanding: 'Outstanding', th_overdue: 'Overdue', th_days_late: 'Days late', th_risk: 'Risk',
-        ct_eyebrow: 'Portfolio register', ct_title: 'Contracts', ct_sub: 'Add contracts manually or import an XLSX workbook; a Payments sheet can record payments by contract ID.', ct_search_placeholder: 'Search model, borrower, plate or ID', filter_all_statuses: 'All statuses', filter_all_types: 'All asset types', ct_register_title: 'Contract register', ct_totals_label: 'Total', ct_schedule_mismatch_badge: '{n} schedule mismatch', schedule_mismatch_tooltip: 'Payment schedule does not add up to the total receivable (off by {amount})', th_contract_asset: 'Contract / asset', th_principal: 'Principal', th_total_return: 'Total return', th_roi: 'ROI', th_status: 'Status',
+        ct_eyebrow: 'Portfolio register', ct_title: 'Contracts', ct_sub: 'Add contracts manually or import an XLSX workbook; a Payments sheet can record payments by contract ID.', ct_search_placeholder: 'Search model, borrower, plate or ID', filter_all_statuses: 'All statuses', filter_all_types: 'All asset types', ct_register_title: 'Contract register', ct_totals_label: 'Total', ct_schedule_mismatch_badge: '{n} schedule mismatch', schedule_mismatch_tooltip: 'Payment schedule does not add up to the total receivable (off by {amount})', btn_export_excel: 'Export Excel', toast_export_contracts: 'Exported {n} contracts to Excel', toast_export_payments: 'Exported {n} payment rows to Excel', xl_id: 'ID', xl_asset: 'Asset', xl_asset_type: 'Asset type', xl_lender: 'Lender', xl_license_plate: 'License plate', xl_vehicle_year: 'Vehicle year', xl_mileage: 'Mileage', xl_asset_price: 'Asset price', xl_contract_date: 'Contract date', xl_first_due_date: 'First due date', xl_term_months: 'Term months', xl_markup_pct: 'Markup %', xl_paid_total: 'Paid total', xl_overdue: 'Overdue', xl_days_late: 'Days late', xl_roi_pct: 'ROI %', xl_notes: 'Notes', xl_payment_contract_id: 'Contract ID', xl_payment_date: 'Payment date', xl_scheduled: 'Scheduled', xl_paid: 'Paid', xl_variance: 'Variance', pay_status_upcoming: 'Upcoming', th_contract_asset: 'Contract / asset', th_principal: 'Principal', th_total_return: 'Total return', th_roi: 'ROI', th_status: 'Status',
         pay_eyebrow: 'Cash control', pay_title: 'Payments', pay_sub: 'Track the collection schedule, next due amounts, and recorded payment performance.', pay_forecast_title: '12-month cash-flow plan', pay_forecast_sub: 'Current month through the next 11 months · current month highlighted', pay_upcoming_title: 'Upcoming due', pay_upcoming_sub: 'Nearest scheduled payments after the data date', pay_recent_title: 'Recent recorded payments', pay_recent_sub: 'Latest schedule entries', th_payment_date: 'Payment date', th_scheduled: 'Scheduled', th_paid: 'Paid', th_variance: 'Variance',
         risk_eyebrow: 'Early warning', risk_title: 'Risk monitor', risk_sub: 'Prioritize collections using overdue balance, days past due, and payment completion.', btn_open_register: 'Open register', risk_top_title: 'Highest-priority contracts', risk_top_sub: 'Ranked by heuristic risk score and overdue exposure', risk_method_title: 'Risk methodology', risk_method_sub: 'Transparent operational score · 0–100', risk_m1_title: 'Overdue share', risk_m1_sub: 'Overdue amount relative to remaining receivables.', risk_m2_title: 'Days past due', risk_m2_sub: 'Time elapsed since the oldest unpaid scheduled amount.', risk_m3_title: 'Data and collateral', risk_m3_sub: 'Reserved for mileage, vehicle age, and collateral value when completed.', risk_notice_strong: 'Important:', risk_notice_text: 'this is a transparent collection-priority heuristic, not a statistically trained probability-of-default model. A predictive score requires more borrower and repayment history.',
         an_eyebrow: 'Investment performance', an_title: 'Analytics', an_sub: 'Contracted economics, portfolio composition, return rates, and concentration.', btn_print: 'Print summary', an_roi_title: 'Return rate by asset type', an_roi_sub: 'Weighted contracted markup ÷ principal', an_mix_title: 'Portfolio composition', an_mix_sub: 'Original principal invested by asset type', an_signals_title: 'Decision signals', an_signals_sub: 'Automatically calculated from the normalized workbook records',
@@ -835,7 +835,7 @@
         tagline: 'ПОРТФЕЛЬНАЯ СИСТЕМА', nav_workspace: 'Разделы', nav_overview: 'Обзор', nav_contracts: 'Договоры', nav_payments: 'Платежи', nav_risk: 'Мониторинг рисков', nav_risk_short: 'Риски', nav_analytics: 'Аналитика',
         search_portfolio: 'Поиск по портфелю', search_placeholder: 'Поиск по договорам, клиентам, номерам…', export_title: 'Экспорт данных портфеля', record_payment_title: 'Записать платёж', logout_title: 'Безопасный выход', btn_logout: 'Выйти', profile_name: 'Miraziz Mirjalolov', profile_role: 'Владелец финансов · Администратор',
         ov_eyebrow: 'Панель владельца', ov_title: 'Обзор портфеля', btn_record_payment: 'Записать платёж', btn_new_contract: 'Новый договор', ov_cashflow_title: 'Ежемесячные поступления', ov_cashflow_sub: 'План и факт · последние 12 месяцев, включая текущий', legend_scheduled: 'По плану', legend_collected: 'Получено', legend_current: 'Текущий месяц', ov_risk_title: 'Статус портфеля', ov_risk_sub: 'Открытая задолженность по уровню риска', ov_attention_title: 'Требует внимания', btn_view_all: 'Смотреть все', th_contract: 'Договор', th_borrower: 'Заёмщик', th_outstanding: 'Остаток', th_overdue: 'Просрочка', th_days_late: 'Дней просрочки', th_risk: 'Риск',
-        ct_eyebrow: 'Реестр портфеля', ct_title: 'Договоры', ct_sub: 'Добавляйте договоры вручную или импортируйте XLSX; лист «Payments» записывает платежи по ID договора.', ct_search_placeholder: 'Поиск по модели, заёмщику, номеру или ID', filter_all_statuses: 'Все статусы', filter_all_types: 'Все типы активов', ct_register_title: 'Реестр договоров', ct_totals_label: 'Итого', ct_schedule_mismatch_badge: 'Расхождение графика: {n}', schedule_mismatch_tooltip: 'График платежей не совпадает с итоговой суммой договора (разница {amount})', th_contract_asset: 'Договор / актив', th_principal: 'Основной долг', th_total_return: 'Итоговая сумма', th_roi: 'ROI', th_status: 'Статус',
+        ct_eyebrow: 'Реестр портфеля', ct_title: 'Договоры', ct_sub: 'Добавляйте договоры вручную или импортируйте XLSX; лист «Payments» записывает платежи по ID договора.', ct_search_placeholder: 'Поиск по модели, заёмщику, номеру или ID', filter_all_statuses: 'Все статусы', filter_all_types: 'Все типы активов', ct_register_title: 'Реестр договоров', ct_totals_label: 'Итого', ct_schedule_mismatch_badge: 'Расхождение графика: {n}', schedule_mismatch_tooltip: 'График платежей не совпадает с итоговой суммой договора (разница {amount})', btn_export_excel: 'Экспорт в Excel', toast_export_contracts: 'Экспортировано договоров: {n}', toast_export_payments: 'Экспортировано платежей: {n}', xl_id: 'ID', xl_asset: 'Модель', xl_asset_type: 'Тип актива', xl_lender: 'Кредитор', xl_license_plate: 'Госномер', xl_vehicle_year: 'Год выпуска', xl_mileage: 'Пробег', xl_asset_price: 'Стоимость', xl_contract_date: 'Дата договора', xl_first_due_date: 'Дата первого платежа', xl_term_months: 'Срок мес', xl_markup_pct: 'Наценка', xl_paid_total: 'Уплачено', xl_overdue: 'Просрочка', xl_days_late: 'Дней просрочки', xl_roi_pct: 'ROI %', xl_notes: 'Примечание', xl_payment_contract_id: 'Номер договора', xl_payment_date: 'Дата платежа', xl_scheduled: 'План', xl_paid: 'Оплачено', xl_variance: 'Отклонение', pay_status_upcoming: 'Ожидается', th_contract_asset: 'Договор / актив', th_principal: 'Основной долг', th_total_return: 'Итоговая сумма', th_roi: 'ROI', th_status: 'Статус',
         pay_eyebrow: 'Управление денежным потоком', pay_title: 'Платежи', pay_sub: 'График сбора платежей, ближайшие сроки и фактическая собираемость.', pay_forecast_title: 'План поступлений на 12 месяцев', pay_forecast_sub: 'Текущий месяц и следующие 11 месяцев · текущий месяц выделен', pay_upcoming_title: 'Ближайшие платежи', pay_upcoming_sub: 'Ближайшие платежи после отчётной даты', pay_recent_title: 'Недавние платежи', pay_recent_sub: 'Последние записи графика', th_payment_date: 'Дата платежа', th_scheduled: 'По плану', th_paid: 'Оплачено', th_variance: 'Отклонение',
         risk_eyebrow: 'Раннее предупреждение', risk_title: 'Мониторинг рисков', risk_sub: 'Приоритизация взысканий по просроченной сумме, дням просрочки и полноте оплаты.', btn_open_register: 'Открыть реестр', risk_top_title: 'Договоры с наивысшим приоритетом', risk_top_sub: 'Ранжировано по оценке риска и просроченной сумме', risk_method_title: 'Методика оценки риска', risk_method_sub: 'Прозрачная операционная оценка · 0–100', risk_m1_title: 'Доля просрочки', risk_m1_sub: 'Просроченная сумма относительно остатка задолженности.', risk_m2_title: 'Дни просрочки', risk_m2_sub: 'Время с момента старейшего неоплаченного платежа.', risk_m3_title: 'Данные и залог', risk_m3_sub: 'Резерв для пробега, возраста ТС и стоимости залога после заполнения.', risk_notice_strong: 'Важно:', risk_notice_text: 'это прозрачная эвристика приоритизации взысканий, а не статистически обученная модель вероятности дефолта. Для прогнозной модели нужно больше истории по заёмщикам и платежам.',
         an_eyebrow: 'Инвестиционные показатели', an_title: 'Аналитика', an_sub: 'Экономика договоров, состав портфеля, доходность и концентрация.', btn_print: 'Печать сводки', an_roi_title: 'Доходность по типу актива', an_roi_sub: 'Взвешенная наценка ÷ основной долг', an_mix_title: 'Состав портфеля', an_mix_sub: 'Исходный основной долг по типу актива', an_signals_title: 'Ключевые сигналы', an_signals_sub: 'Рассчитывается автоматически по данным реестра',
@@ -1144,15 +1144,18 @@
       document.getElementById('riskDonut').innerHTML = hero + stackEl + list;
     }
 
-    function renderContracts() {
+    function filteredContracts() {
       const query = document.getElementById('contractSearch').value.trim().toLowerCase();
       const status = document.getElementById('statusFilter').value;
       const type = document.getElementById('typeFilter').value;
-      const filtered = contracts.filter(c => {
+      return contracts.filter(c => {
         const haystack = [c.id,c.assetName,c.borrower,c.licensePlate,c.sourceSheet].join(' ').toLowerCase();
         const matchesStatus = status === 'all' || (status === 'Current' ? c.status !== 'Closed' : c.status === status);
         return (!query || haystack.includes(query)) && matchesStatus && (type === 'all' || c.assetType === type);
       }).sort((a,b) => (a.status==='Closed') - (b.status==='Closed') || b.outstanding - a.outstanding);
+    }
+    function renderContracts() {
+      const filtered = filteredContracts();
       document.getElementById('contractResultCount').textContent = `${filtered.length} ${lang==='ru'?'из':'of'} ${contracts.length}`;
       const mismatchCount = filtered.filter(c => c.hasScheduleMismatch).length;
       const mismatchBadge = document.getElementById('scheduleMismatchBadge');
@@ -1164,6 +1167,60 @@
         <td class="mono">${c.simpleROI.toFixed(1)}%</td><td><span class="status ${statusClass(c.status)}">${statusLabel(c.status)}</span></td><td><button class="table-action" onclick="openDetail('${c.id}')">${t('btn_details')}</button></td></tr>`).join('') : `<tr><td colspan="8" class="empty">${t('empty_contracts')}</td></tr>`;
       document.getElementById('contractsTotals').innerHTML = filtered.length ? `<tr class="totals-row">
         <td colspan="2">${t('ct_totals_label')}</td><td class="mono">${money.format(sum(filtered,'principal'))}</td><td class="mono">${money.format(sum(filtered,'totalReceivable'))}</td><td class="mono">${money.format(sum(filtered,'outstanding'))}</td><td></td><td></td><td></td></tr>` : '';
+    }
+
+    function exportContractsExcel() {
+      const rows = filteredContracts().map(c => ({
+        [t('xl_id')]: c.id,
+        [t('xl_asset')]: c.assetName,
+        [t('xl_asset_type')]: assetTypeLabel(c.assetType),
+        [t('th_borrower')]: c.borrower,
+        [t('xl_lender')]: c.lender || '',
+        [t('xl_license_plate')]: c.licensePlate || '',
+        [t('xl_vehicle_year')]: c.vehicleYear || '',
+        [t('xl_mileage')]: c.mileage || '',
+        [t('xl_asset_price')]: c.assetPrice || '',
+        [t('xl_contract_date')]: c.contractDate || '',
+        [t('xl_first_due_date')]: c.firstDueDate || '',
+        [t('xl_term_months')]: c.termMonths,
+        [t('th_principal')]: c.principal,
+        [t('xl_markup_pct')]: c.interestRate,
+        [t('th_total_return')]: c.totalReceivable,
+        [t('xl_paid_total')]: c.paidTotal,
+        [t('th_outstanding')]: c.outstanding,
+        [t('xl_overdue')]: c.overdue,
+        [t('xl_days_late')]: c.daysLate,
+        [t('xl_roi_pct')]: +c.simpleROI.toFixed(1),
+        [t('th_status')]: statusLabel(c.status),
+        [t('xl_notes')]: c.notes || ''
+      }));
+      const sheet = XLSX.utils.json_to_sheet(rows);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, sheet, 'Contracts');
+      XLSX.writeFile(workbook, `autofinance-contracts-${currentDateISO}.xlsx`);
+      showToast(t('toast_export_contracts', { n: rows.length }));
+    }
+
+    function exportPaymentsExcel() {
+      const rows = contracts.flatMap(c => (c.schedule || []).filter(r => r.dueDate).map(r => {
+        const due = parseISO(r.dueDate);
+        const status = due > dataDate ? t('pay_status_upcoming') : (r.paid >= r.scheduled - 1 ? t('pay_status_complete') : t('pay_status_short'));
+        return {
+          [t('xl_payment_contract_id')]: c.id,
+          [t('xl_asset')]: c.assetName,
+          [t('th_borrower')]: c.borrower,
+          [t('xl_payment_date')]: r.dueDate,
+          [t('xl_scheduled')]: r.scheduled,
+          [t('xl_paid')]: r.paid,
+          [t('xl_variance')]: +((r.paid || 0) - (r.scheduled || 0)).toFixed(2),
+          [t('th_status')]: status
+        };
+      })).sort((a, b) => String(a[t('xl_payment_date')]).localeCompare(String(b[t('xl_payment_date')])));
+      const sheet = XLSX.utils.json_to_sheet(rows);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, sheet, 'Payments');
+      XLSX.writeFile(workbook, `autofinance-payments-${currentDateISO}.xlsx`);
+      showToast(t('toast_export_payments', { n: rows.length }));
     }
 
     function renderPayments() {
@@ -1422,6 +1479,8 @@
         showToast(t('toast_delete_failed',{error:err.message}));
       }
     });
+    document.getElementById('exportContractsExcelBtn')?.addEventListener('click',exportContractsExcel);
+    document.getElementById('exportPaymentsExcelBtn')?.addEventListener('click',exportPaymentsExcel);
     document.getElementById('importExcelBtn')?.addEventListener('click',()=>document.getElementById('excelImportInput').click());
     document.getElementById('excelImportInput')?.addEventListener('change',async event=>{
       const file=event.target.files[0]; event.target.value='';
